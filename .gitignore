@@ -41,9 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#txt
 node_modules/
 dist/
-.gitignore
-angular.json
+.angular/
 package-lock.json
+.env
+
