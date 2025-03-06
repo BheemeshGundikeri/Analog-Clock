@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -8,7 +9,8 @@ import { BrowserModule } from '@angular/platform-browser';
   declarations: [],
   imports: [
     BrowserModule,
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ]
 })
 export class AppModule { }

@@ -1,0 +1,22 @@
+
+<h1 class="p-5 text-dark text-center ">The World Depends on Clock</h1>
+<div class=" clock position-relative d-flex justify-content-center align-items-center mx-auto rounded-circle">
+  <div class="w-100 h-100 position-relative">
+    <!-- Clock Hands -->
+    <div class="hand position-absolute start-50 bg-dark" 
+    style="bottom: 50%; width: 8px; height: 70px; transform-origin: bottom;" [style.transform]="'rotate(' + hourDeg + 'deg)'"></div>
+    <div class="hand position-absolute start-50  bg-primary" 
+    style="bottom: 50%; width: 5px; height: 90px; transform-origin: bottom;" [style.transform]="'rotate(' + minuteDeg + 'deg)'"></div>
+    <div class="hand position-absolute start-50 bg-danger" 
+    style="bottom: 50%; width: 2px; height: 100px; transform-origin: bottom;" [style.transform]="'rotate(' + secondDeg + 'deg)'"></div>
+    
+    <!-- Center Circle -->
+    <div class="position-absolute top-50 start-50 translate-middle bg-dark rounded-circle" style="width: 15px; height: 15px;"></div>
+
+    <!-- Clock Numbers -->
+    <div *ngFor="let num of clockNumbers" class="position-absolute text-center text-white h-100 w-100" [style.transform]="'rotate(' + num.angle + 'deg)'">
+      <span class="position-absolute left-47 translate-middle-x fw-bold fs-4"
+      [style.transform]="'rotate(' + (num.angle) + 'deg)'">{{ num.value }}</span>
+    </div>
+  </div>
+</div>
